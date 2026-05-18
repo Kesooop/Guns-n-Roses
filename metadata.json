@@ -1,0 +1,9 @@
+{
+    "id": "GunsnRoses",
+    "name": "Guns n' Roses",
+    "author": ["Dubno"],
+    "description": "currently WIP will change later, cool mod ig",
+    "prefix": "roses",
+    "main_file": "main.lua",
+    "version": "0.0.1"
+}
