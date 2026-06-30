@@ -1,0 +1,28 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "globals.lua"
+pattern = "RENTAL = HEX('b18f43'),"
+position = "after"
+match_indent = true
+payload = '''
+ROSES_BROWN = HEX('855C46'),
+ROSES_MAGENTA = HEX('F255B8'),
+ROSES_DIAMOND = HEX('10C4F5'),
+'''
+
+[[patches]]
+[patches.pattern]
+target = "functions/misc_functions.lua"
+pattern = "G.ARGS.LOC_COLOURS = G.ARGS.LOC_COLOURS or {"
+position = "after"
+match_indent = true
+payload = '''
+  roses_brown = G.C.ROSES_BROWN,
+  roses_magenta = G.C.ROSES_MAGENTA,
+  roses_diamond = G.C.ROSES_DIAMOND,
+'''

@@ -1,0 +1,61 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = """        perma_x_mult = self.ability and self.ability.perma_x_mult or 0,"""
+position = "after"
+payload = """perma_roses_balance = self.ability and self.ability.perma_roses_balance or 0,
+perma_roses_h_balance = self.ability and self.ability.perma_roses_h_balance or 0,
+"""
+overwrite = true
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = """                    bonus_x_chips = self.ability.perma_x_chips ~= 0 and (self.ability.perma_x_chips + 1) or nil,"""
+position = "after"
+payload = """perma_roses_balance = self.ability.perma_roses_balance ~= 0 and (self.ability.perma_roses_balance) or nil,
+perma_roses_h_balance = self.ability.perma_roses_h_balance ~= 0 and (self.ability.perma_roses_h_balance) or nil,
+"""
+overwrite = true
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = '=[SMODS _ "src/utils.lua"]'
+pattern = """    if specific_vars and specific_vars.bonus_h_dollars then
+        localize{type = 'other', key = 'card_extra_h_dollars', nodes = desc_nodes, vars = {SMODS.signed_dollars(specific_vars.bonus_h_dollars)}}
+    end"""
+position = "after"
+payload = """
+if specific_vars and specific_vars.perma_roses_balance then
+    localize { type = "other", key = "perma_roses_balance", nodes = desc_nodes, vars = { SMODS.signed(specific_vars.perma_roses_balance) } }
+end
+if specific_vars and specific_vars.perma_roses_h_balance then
+    localize { type = "other", key = "perma_roses_h_balance", nodes = desc_nodes, vars = { SMODS.signed(specific_vars.perma_roses_h_balance) } }
+end
+"""
+overwrite = true
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = '=[SMODS _ "src/game_object.lua"]'
+pattern = """            if specific_vars and specific_vars.bonus_h_x_mult then
+                localize{type = 'other', key = 'card_extra_h_x_mult', nodes = desc_nodes, vars = {SMODS.signed_x_mult(specific_vars.bonus_h_x_mult)}}
+            end"""
+position = "after"
+payload = """
+if specific_vars and specific_vars.perma_roses_balance then
+    localize { type = "other", key = "perma_roses_balance", nodes = desc_nodes, vars = { SMODS.signed(specific_vars.perma_roses_balance) } }
+end
+if specific_vars and specific_vars.perma_roses_h_balance then
+    localize { type = "other", key = "perma_roses_h_balance", nodes = desc_nodes, vars = { SMODS.signed(specific_vars.perma_roses_h_balance) } }
+end
+"""
+overwrite = true
+match_indent = true
