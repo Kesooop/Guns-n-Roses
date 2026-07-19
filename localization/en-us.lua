@@ -44,37 +44,67 @@ return {
                 }
             }
         },
+    paperback_minor_arcana = {
+      c_roses_tomato = {
+        name = "Two of Relics",
+        text = {
+          "Add a {C:roses_brown}Brown Clip{} to up",
+          "to {C:attention}#1#{} selected cards"
+        }
+      },
+     c_roses_beet = {
+        name = "Knight of Relics",
+        text = {
+          "Add a {C:roses_magenta}Magenta Clip{} to up",
+          "to {C:attention}#1#{} selected cards"
+        }
+      },
+      c_roses_carrot = {
+        name = "King of Relics",
+        text = {
+          "Add a {C:roses_diamond}Diamond Clip{} to",
+          "{C:attention}#1#{} selected card"
+        }
+      },
+    },
     Other = {
             perma_roses_balance={
                 text={
                     "{C:aij_plasma}Balance{} {C:attention}#1#%{} of chips and mult when scored",
                 }
             },
+            perma_roses_x_money={
+                text={
+                    "{X:money,C:white}X#1#{}{C:money}${} when scored",
+                }
+            },
             roses_brown_clip = {
                 name = "Brown Clip",
                 text = {
-                   "When {C:attention}scored{}, {X:chips,C:white}X#1#{} Chips",
-                   "for each {C:attention}Clip{} held in hand",
-                "{C:inactive}(Currently {X:chips,C:white}X#2#{C:inactive} Chips)"
+                   "{C:attention}+1{} hand size if atleast",
+                   "{C:attention}#5#{} clips have been discarded",
+                   "this round, extra hand size",
+                   "won't go over {C:attention}#6#{}",
+                   "{C:inactive}(Currently {{C:attention}#3#{} {C:inactive}discarded clips)"
                 }
             },
             roses_magenta_clip = {
                 name = "Magenta Clip",
                 text = {
-                     "When {C:attention}scored{}, {{C:aij_plasma}Balance{} {C:attention}#1#%{} of chips and mult",
+                     "When {C:attention}scored{}, Balance {{C:aij_plasma}#1#%{} of chips and mult",
                      "for each {C:attention}Clip{} held in hand",
-                     "{C:inactive}(Currently {{C:attention}#2#%{})",
+                     "{C:inactive}(Currently {{C:aij_plasma}#2#%{})",
                      "Otherwise, if held in hand",
-                     "{{C:aij_plasma}Balance{} {C:attention}#3#%{} of chips and mult",
-                     "for each {C:attention}Clip{} scored"
+                     "Balance {{C:aij_plasma}#3#%{} of chips and mult",
+                     "for each scored {C:attention}Clip{}",
+                      "{C:inactive}(Resets after hand played)"
                      }
                 },
             roses_diamond_clip = {
                 name = "Diamond Clip",
                 text = { 
-                "When {C:attention}scored{}, {X:chips,C:white}X#1#{} Chips",
-                "for each {C:attention}Clip{} held in hand",
-                "{C:inactive}(Currently {X:chips,C:white}X#2#{C:inactive} Chips)",
+                "Counts as {C:attention}2 clips{} when",
+                "played, discarded, or held in hand"
             }
         }
     }

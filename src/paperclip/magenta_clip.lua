@@ -5,9 +5,9 @@ PB_UTIL.Paperclip {
   badge_colour = G.C.ROSES_MAGENTA,
     config = {
     balance_base = 0,
-    balance_mod = 1,
+    balance_mod = 2,
     balance_hand_base = 0,
-    balance_hand_mod = 1,
+    balance_hand_mod = 2,
     larry = 0
   },
 

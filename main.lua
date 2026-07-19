@@ -59,4 +59,8 @@ for _, file in ipairs(paperclip_src)do
     assert(SMODS.load_file("src/paperclip/".. file))()
 end
 SMODS.load_file("utilities/definitions.lua")()
+SMODS.load_file("utilities/indicators.lua")()
+SMODS.load_file("utilities/hooks.lua")()
+SMODS.load_file("utilities/misc_functions.lua")()
+SMODS.load_file("utilities/functions.lua")()
 
