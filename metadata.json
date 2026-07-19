@@ -7,5 +7,5 @@
     "prefix": "roses",
     "main_file": "main.lua",
     "version": "0.0.1",
-    "dependencies" : ["paperback"]
+    "dependencies" : ["allinjest","paperback"]
 }
