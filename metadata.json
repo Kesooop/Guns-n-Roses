@@ -2,10 +2,10 @@
     "id": "GunsnRoses",
     "name": "Guns n' Roses",
     "author": ["Dubno"],
-    "priority": 5,
+    "priority": 10000,
     "description": "currently WIP will change later, cool mod ig",
     "prefix": "roses",
     "main_file": "main.lua",
     "version": "0.0.1",
-    "dependencies" : ["allinjest","paperback"]
+    "dependencies" : ["paperback"]
 }
