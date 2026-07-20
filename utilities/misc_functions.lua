@@ -31,3 +31,8 @@ end
 -- so now whats happening is that while diamond clips dp count as 2 clips, when counting paperclips onlydiamond clips are being counted,probs cus im overwriting count_paperclips
   return clips
 end
+PB_UTIL.Developer({
+  name = 'kesooop',
+  loc = true,
+  colour = HEX('eea858')
+})

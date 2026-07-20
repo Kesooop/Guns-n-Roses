@@ -42,7 +42,14 @@ return {
                     "{s:0.8}Rank changes every round",
                     "{C:inactive}(currently +#1# mult)",
                 }
-            }
+            },
+            j_roses_crown_royal = {
+                name = "Crown Royal",
+                text = {
+                  "The next {C:attention}#1#{} scored {C:attention}Wild Cards{} permanently gain",
+                  "{C:roses_plasma}#3#%{} Balance when scored",
+                 },
+             },
         },
     paperback_minor_arcana = {
       c_roses_tomato = {
@@ -122,6 +129,9 @@ labels = {
       roses_brown_clip = "Brown Clip",
       roses_magenta_clip = "Magenta Clip",
       roses_diamond_clip = "Diamond Clip",
-}
+},
+ dictionary ={
+    paperback_dev_kesooop = 'Kesooop',
+ }
     },
 }

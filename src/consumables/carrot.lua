@@ -7,9 +7,9 @@ PB_UTIL.MinorArcana {
   atlas = 'consumables',
   pos = { x = 1, y = 0 },
   paperback_credit = {
-    coder = { 'kesooop' }
+    coder = { 'kesooop' },
+    artist = { 'kesooop' }
   },
-
   paperback = {
     requires_paperclips = true
   }
