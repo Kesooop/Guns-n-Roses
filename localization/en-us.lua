@@ -70,7 +70,7 @@ return {
     Other = {
             perma_roses_balance={
                 text={
-                    "{C:aij_plasma}Balance{} {C:attention}#1#%{} of chips and mult when scored",
+                    "{C:roses_plasma}Balance{} {C:attention}#1#%{} of chips and mult when scored",
                 }
             },
             perma_roses_x_money={
@@ -91,11 +91,11 @@ return {
             roses_magenta_clip = {
                 name = "Magenta Clip",
                 text = {
-                     "When {C:attention}scored{}, Balance {{C:aij_plasma}#1#%{} of chips and mult",
+                     "When {C:attention}scored{}, Balance {{C:roses_plasma}#1#%{} of chips and mult",
                      "for each {C:attention}Clip{} held in hand",
-                     "{C:inactive}(Currently {{C:aij_plasma}#2#%{})",
+                     "{C:inactive}(Currently {{C:roses_plasma}#2#%{})",
                      "Otherwise, if held in hand",
-                     "Balance {{C:aij_plasma}#3#%{} of chips and mult",
+                     "Balance {{C:roses_plasma}#3#%{} of chips and mult",
                      "for each scored {C:attention}Clip{}",
                       "{C:inactive}(Resets after hand played)"
                      }
