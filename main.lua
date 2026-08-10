@@ -37,8 +37,20 @@ SMODS.Atlas {
     py = 95
 }
 SMODS.Atlas {
+    key = 'ego',
+    path = 'EGOGifts.png',
+    px = 71,
+    py = 95
+}
+SMODS.Atlas {
     key = 'paperclips',
     path = 'paperclips.png',
+    px = 71,
+    py = 95
+}
+SMODS.Atlas {
+    key = 'enhancements',
+    path = 'enhancements.png',
     px = 71,
     py = 95
 }
@@ -54,21 +66,23 @@ local jokers_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/jo
 for _, file in ipairs(jokers_src)do
     assert(SMODS.load_file("src/jokers/".. file))()
 end
---local suits_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/suits")
---for _, file in ipairs(suits_src)do
---   assert(SMODS.load_file("src/suits/".. file))()
+--local EGO_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/EGO")
+--for _, file in ipairs(EGO_src)do
+--  assert(SMODS.load_file("src/EGO/".. file))()
 --end
-local consumables_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/consumables")
-for _, file in ipairs(consumables_src)do
-    assert(SMODS.load_file("src/consumables/".. file))()
-end
 local paperclip_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/paperclip")
 for _, file in ipairs(paperclip_src)do
     assert(SMODS.load_file("src/paperclip/".. file))()
 end
+--local enhancements_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/enhancements")
+--for _, file in ipairs(enhancements_src)do
+--    assert(SMODS.load_file("src/enhancements/".. file))()
+--end
 SMODS.load_file("utilities/definitions.lua")()
 SMODS.load_file("utilities/indicators.lua")()
 SMODS.load_file("utilities/hooks.lua")()
 SMODS.load_file("utilities/misc_functions.lua")()
 SMODS.load_file("utilities/functions.lua")()
+
+PB_UTIL.register_items(PB_UTIL.ENABLED_MINOR_ARCANA, "src/consumables")
 

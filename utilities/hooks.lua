@@ -29,13 +29,13 @@ function eval_card(card, context)
 end
 
 -- if a brown clip is copied, replace it with a random non-special clip
-local copy_card_ref = copy_card
-copy_card = function(other, new_card, card_scale, playing_card, strip_edition)
-  local clip = PB_UTIL.has_paperclip(other)
-  local other = copy_card_ref(other, new_card, card_scale, playing_card, strip_edition)
-    if PB_UTIL.is_special_clip(clip) and clip == "roses_brown_clip" and not G.SETTINGS.paused and not other.debuff then
-     other.ability.card_limit = 0
-      PB_UTIL.set_paperclip(other, PB_UTIL.poll_paperclip('plat_copy', false))
-  end
-  return other
-end
+--local copy_card_ref = copy_card
+--copy_card = function(other, new_card, card_scale, playing_card, strip_edition)
+--  local clip = PB_UTIL.has_paperclip(other)
+--  local other = copy_card_ref(other, new_card, card_scale, playing_card, strip_edition)
+--    if PB_UTIL.is_special_clip(clip) and clip == "roses_brown_clip" and not G.SETTINGS.paused and not other.debuff then
+--     other.ability.card_limit = 0
+--      PB_UTIL.set_paperclip(other, PB_UTIL.poll_paperclip('plat_copy', false))
+--  end
+--  return other
+--end

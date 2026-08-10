@@ -13,6 +13,8 @@ payload = '''
 ROSES_BROWN = HEX('855C46'),
 ROSES_MAGENTA = HEX('F255B8'),
 ROSES_DIAMOND = HEX('10C4F5'),
+ROSES_INDIGO = HEX('6B78EB'),
+PAPERBACK_SIN_INDULGENCE = HEX('647362'),
 '''
 
 [[patches]]
@@ -25,4 +27,5 @@ payload = '''
   roses_brown = G.C.ROSES_BROWN,
   roses_magenta = G.C.ROSES_MAGENTA,
   roses_diamond = G.C.ROSES_DIAMOND,
+  roses_indigo = G.C.ROSES_INDIGO,
 '''

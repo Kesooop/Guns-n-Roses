@@ -1,5 +1,5 @@
 PB_UTIL.MinorArcana {
-  key = 'beet',
+  key = 'knight_of_relics',
   config = {
     paperclip = 'roses_magenta_clip',
     max_highlighted = 2

@@ -7,8 +7,7 @@ PB_UTIL.Paperclip {
     balance_base = 0,
     balance_mod = 2,
     balance_hand_base = 0,
-    balance_hand_mod = 2,
-    larry = 0
+    balance_hand_mod = 2
   },
 
   loc_vars = function(self, info_queue, card)
@@ -22,8 +21,7 @@ PB_UTIL.Paperclip {
         card.ability[self.key].balance_mod,
         card.ability[self.key].balance_base + clips * card.ability[self.key].balance_mod,
         card.ability[self.key].balance_hand_mod,
-        card.ability[self.key].balance_hand_base,
-        card.ability[self.key].larry
+        card.ability[self.key].balance_hand_base
       }
     }
   end,

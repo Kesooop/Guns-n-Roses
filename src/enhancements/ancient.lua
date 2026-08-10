@@ -1,8 +1,8 @@
 SMODS.Enhancement {
     key = 'ancient',
-    atlas = 'enhacements.png',
+    atlas = 'enhancements',
     pos = {
-        x = 0,
+        x = 3,
         y = 0
     },
     config ={

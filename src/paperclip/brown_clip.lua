@@ -3,7 +3,7 @@ PB_UTIL.Paperclip {
   atlas = 'paperclips',
   pos = { x = 1, y = 0 },
   badge_colour = G.C.ROSES_BROWN,
-  special = true,
+  special = false,
   config = {
     handsize = 0,
     handsize_mod = 1,

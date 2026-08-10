@@ -1,15 +1,16 @@
 PB_UTIL.MinorArcana {
-  key = 'carrot',
+  key = 'five_of_relics',
   config = {
-    paperclip = 'roses_diamond_clip',
-    max_highlighted = 1
+    paperclip = 'roses_brown_clip',
+    max_highlighted = 2
   },
   atlas = 'consumables',
-  pos = { x = 1, y = 0 },
-  paperback_credit = {
+  pos = { x = 0, y = 0 },
+   paperback_credit = {
     coder = { 'kesooop' },
     artist = { 'kesooop' }
   },
+
   paperback = {
     requires_paperclips = true
   }

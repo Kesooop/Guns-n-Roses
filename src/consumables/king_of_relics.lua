@@ -1,16 +1,15 @@
 PB_UTIL.MinorArcana {
-  key = 'tomato',
+  key = 'king_of_relics',
   config = {
-    paperclip = 'roses_brown_clip',
-    max_highlighted = 2
+    paperclip = 'roses_diamond_clip',
+    max_highlighted = 1
   },
   atlas = 'consumables',
-  pos = { x = 0, y = 0 },
-   paperback_credit = {
+  pos = { x = 1, y = 0 },
+  paperback_credit = {
     coder = { 'kesooop' },
     artist = { 'kesooop' }
   },
-
   paperback = {
     requires_paperclips = true
   }

@@ -4,6 +4,11 @@ SMODS.current_mod.calculate = function(self, context)
       aij_balance_percent = context.other_card.ability.perma_roses_balance * 0.01
      }
   end
+  		if context.individual and context.cardarea == G.hand and context.other_card.ability.perma_roses_h_balance ~= 0 then
+      return {
+      aij_balance_percent = context.other_card.ability.perma_roses_h_balance * 0.01
+     }
+  end
 		if context.individual and context.cardarea == G.play and context.other_card.ability.perma_roses_x_money ~= 0 then
       local money = math.floor(G.GAME.dollars * context.other_card.ability.perma_roses_x_money + 1)
       G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) + money
@@ -44,4 +49,28 @@ if context.end_of_round then
     end
   end
 end
+    if context.using_consumeable then
+        if context.consumeable.ability.set == "paperback_minor_arcana" then
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after',
+                delay = 0.1,
+                func = function()
+                    G.GAME.roses_last_minor_arcana = context.consumeable.config.center_key
+                    return true
+                end
+            }))
+        end
+    end
 end
+PB_UTIL.ENABLED_MINOR_ARCANA = {
+  "two_of_relics",
+  "four_of_relics",
+  "five_of_relics",
+  "six_of_relics",
+  "eight_of_relics",
+  "nine_of_relics",
+  "ten_of_relics",
+  "paige_of_relics",
+  "knight_of_relics",
+  "king_of_relics", -- RELICS
+}
