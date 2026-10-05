@@ -7,7 +7,7 @@ PB_UTIL.MinorArcana {
     }
   },
   atlas = 'consumables',
-  pos = { x = 1, y = 1 },
+  pos = { x = 3, y = 0 },
   paperback = {
     requires_paperclips = false
   },

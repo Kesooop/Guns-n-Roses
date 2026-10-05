@@ -1,5 +1,23 @@
 return {
     descriptions = {
+    Enhanced = {
+            m_roses_rose_gold = {
+                name = "Rose Gold Card",
+                text = {
+                    '{C:attention}Retrigger{} a random played',
+                    'card used in scoring',
+                    'while this card stays in hand'
+                },
+            },
+            m_roses_milimetric = {
+                name = "Milimetric Card",
+                text = {
+                    '{X:mult,C:white}X#1#{} Mult,',
+                    'increases by {X:mult,C:white}X#2#{} Mult when',
+                    'discarded, {C:attention}resets{} after scoring'
+                },
+            },
+          },
         Joker = {
             j_roses_joker1 = {
                 name = 'Joker1',
@@ -30,17 +48,17 @@ return {
                         'All cards held in hand at',
                         'end of round permanently gain {X:mult,C:white}X#4#{} Mult',
                         'for each card destroyed this way',
-                        '{C:inactive}(Currently #3#X mult)'
+                        '{C:inactive}(Currently {X:mult,C:white}X#3#{} {C:inactive}Mult)'
                     }
                 }
             },
             j_roses_calendar = {
                 name = 'Calendar',
                 text = {
-                    "This joker gains {C:red}+#2#{} Mult",
+                    "This Joker gains {C:red}+#2#{} Mult",
                     "every time a {C:attention}#3#{} is scored",
                     "{s:0.8}Rank changes every round",
-                    "{C:inactive}(currently +#1# mult)",
+                    "{C:inactive}(currently {C:red}+#1#{} {C:inactive}Mult)",
                 }
             },
             j_roses_crown_royal = {
@@ -50,24 +68,51 @@ return {
                   "{C:roses_plasma}#3#%{} Score balance when scored",
                  },
              },
+             j_roses_the_navidson_record = {
+                name = "The Navidson Record",
+                text = {
+                  "This Joker gains {X:mult,C:white}X#2#{} Mult",
+                  "if hand contains a {C:attention}Full{} {C:roses_house}House{}",
+                  "and all scoring suits are {C:paperback_dark_suit}dark{}",
+                  "{C:inactive}(Currently {X:mult,C:white}X#1#{} {C:inactive}Mult)"
+                 },
+             },
         },
+      Spectral = {
+      c_roses_apostle_of_relics = {
+        name = "Apostle of Vessels",
+        text = {
+          "{C:attention}+#1#{} Shop slot",
+          "{C:attention}+#2#{} Booster Pack slot",
+          "{C:attention}+#3#{} Voucher slot",
+        }
+      }
+    },
     paperback_minor_arcana = {
+      c_roses_ace_of_relics = {
+        name = "Ace of Vessels",
+        text = {
+          "Add a {C:roses_magenta}Magenta Clip{} to up",
+          "to {C:attention}#1#{} selected cards"
+        }
+      },
       c_roses_two_of_relics = {
-        name = "Two of Relics",
+        name = "Two of Vessels",
         text = {
           "Earn {C:money}$#1#{} for every clip held in hand",
           "{C:inactive}Currently{} {C:money}$#2#{}{C:inactive}/$#3# max{}"
         }
       },
       c_roses_three_of_relics = {
-        name = "Three of Relics",
+        name = "Three of Vessels",
         text = {
-          "Select {C:attention}#1#{} cards, the {C:attention}left{} card",
-          "Copies the {C:attention}clip{} of the {C:attention}right{} card"
+          "Enhances {C:attention}#1#{}",
+          "selected card to",
+          "{C:attention}#2#{}"
         }
       },
       c_roses_four_of_relics = {
-        name = "Four of Relics",
+        name = "Four of Vessels",
         text = {
           "Earn {C:money}$#1#{} for every {C:attention}#2#{} cards in",
           "{C:attention}full deck{}, rounded up",
@@ -75,34 +120,41 @@ return {
         }
       },
       c_roses_five_of_relics = {
-        name = "Five of Relics",
+        name = "Five of Vessels",
         text = {
           "Add a {C:roses_brown}Brown Clip{} to up",
           "to {C:attention}#1#{} selected cards"
         }
       },
       c_roses_six_of_relics = {
-        name = "Six of Relics",
+        name = "Six of Vessels",
         text = {
           "Gives a {C:attention}Double Tag{}"
         }
       },
+      c_roses_seven_of_relics = {
+        name = "Seven of Vessels",
+        text = {
+          "After using this card {C:attention}#1#{} times,",
+          "create an {C:attention}Energized apostle{} spectral card"
+        }
+    },
       c_roses_eight_of_relics = {
-        name = "Eight of Relics",
+        name = "Eight of Vessels",
         text = {
           "Add an {C:roses_indigo}Indigo Clip{} to",
           "{C:attention}#1#{} selected card"
         }
     },
        c_roses_nine_of_relics = {
-        name = "Nine of Relics",
+        name = "Nine of Vessels",
         text = {
           "Apply a random {C:attention}Bonus{} to",
           "up to {C:attention}#1#{} selected card"
         }
       },
       c_roses_ten_of_relics = {
-        name = "Ten of Relics",
+        name = "Ten of Vessels",
         text = {
           "Select {C:attention}#1#{} cards.",
           "{C:green}#2# in #3#{} chance to destroy",
@@ -111,29 +163,37 @@ return {
         }
       },
       c_roses_paige_of_relics = {
-        name = "Page of Relics",
+        name = "Page of Vessels",
         text = {
-          "Creates the last",
-          "{C:paperback_minor_arcana}Minor Arcana{} card",
+          "Creates the last two",
+          "{C:paperback_minor_arcana}Minor Arcana{} cards",
           "used during this run",
-          "{s:0.8,C:paperback_minor_arcana}Page of Relics{s:0.8} excluded",
+          "{s:0.8,C:paperback_minor_arcana}Page of Vessels{s:0.8} excluded",
         }
       },
-     c_roses_knight_of_relics = {
-        name = "Knight of Relics",
+      c_roses_knight_of_relics = {
+        name = "Knight of Vessels",
         text = {
-          "Add a {C:roses_magenta}Magenta Clip{} to up",
-          "to {C:attention}#1#{} selected cards"
+          "Enhances {C:attention}#1#{}",
+          "selected cards to",
+          "{C:attention}#2#s{}"
+        }
+      },
+      c_roses_queen_of_relics = {
+        name = "Queen of Vessels",
+        text = {
+          "Select {C:attention}2{} cards,",
+          "increase the rank of the {C:attention}left{} card by {C:attention}2{},",
+          "decrease the rank of the {C:attention}right{} card by {C:attention}2{}"
         }
       },
       c_roses_king_of_relics = {
-        name = "King of Relics",
+        name = "King of Vessels",
         text = {
           "Add a {C:roses_diamond}Diamond Clip{} to",
           "{C:attention}#1#{} selected card"
         }
-      },
-      
+      }, 
     },
         paperback_ego_gift = {
       c_roses_holy_spear = {
@@ -145,6 +205,14 @@ return {
       }
     },
     Other = {
+            roses_energized = {
+        name = "Energized",
+        text = {
+          "Cannot be copied by",
+          "{C:attention}#1#{} or",
+          "{C:attention}#2#{}",
+        }
+      },
             perma_roses_balance={
                 text={
                     "{C:roses_plasma}Balance{} {C:attention}#1#%{} of chips and mult when scored",
@@ -163,11 +231,9 @@ return {
             roses_brown_clip = {
                 name = "Brown Clip",
                 text = {
-                   "{C:attention}+1{} hand size if atleast",
-                   "{C:attention}#5#{} clips have been discarded",
-                   "this round, extra hand size",
-                   "won't go over {C:attention}#6#{}",
-                   "{C:inactive}(Currently {{C:attention}#3#{} {C:inactive}discarded clips)"
+                   "{C:green}+#2#{} odds for every {C:attention}Clip{}",
+                   "discarded this round",
+                   "{C:inactive}(Currently {{C:green}+#1#{} {C:inactive}odds)"
                 }
             },
             roses_magenta_clip = {

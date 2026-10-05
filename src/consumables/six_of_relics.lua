@@ -1,7 +1,7 @@
 PB_UTIL.MinorArcana {
   key = 'six_of_relics',
   atlas = 'consumables',
-  pos = { x = 3, y = 1 },
+  pos = { x = 5, y = 0 },
   paperback = {
     requires_paperclips = false
   },

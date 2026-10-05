@@ -2,12 +2,12 @@ PB_UTIL.MinorArcana {
   key = 'two_of_relics',
   config = {
     extra = {
-    money = 2,
+    money = 3,
     money_cap = 30
     }
   },
   atlas = 'consumables',
-  pos = { x = 0, y = 2 },
+  pos = { x = 1, y = 0 },
   paperback = {
     requires_paperclips = true
   },
@@ -39,7 +39,7 @@ PB_UTIL.MinorArcana {
       delay = 0.4,
       func = function()
         if clips > 0 then
-          ease_dollars(math.min(card.ability.extra.money_cap, clips * 2))
+          ease_dollars(math.min(card.ability.extra.money_cap, clips * card.ability.extra.money))
         return true
       end
       return true

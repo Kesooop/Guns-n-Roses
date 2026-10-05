@@ -5,7 +5,7 @@ PB_UTIL.MinorArcana {
     max_highlighted = 1
   },
   atlas = 'consumables',
-  pos = { x = 2, y = 1 },
+  pos = { x = 0, y = 1 },
    paperback_credit = {
     coder = { 'kesooop' },
     artist = { 'kesooop' }

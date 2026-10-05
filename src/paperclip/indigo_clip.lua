@@ -73,7 +73,7 @@ active
         end
       }))
     end
-    if context.round_eval then
+    if context.drawing_cards then
       card.ability[self.key].active = true
     end
   end

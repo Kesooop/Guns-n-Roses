@@ -16,11 +16,12 @@ PB_UTIL.MinorArcana {
     perma_x_chips = 0.1,
     perma_x_mult = 0.1,
     perma_roses_balance = 2,
-    perma_paperback_plus_odds = 1
+    perma_paperback_plus_odds = 1,
+    perma_repetitions = 1
     }
   },
   atlas = 'consumables',
-  pos = { x = 5, y = 0 },
+  pos = { x = 1, y = 1 },
   paperback = {
     requires_paperclips = false
   },
@@ -53,7 +54,8 @@ PB_UTIL.MinorArcana {
         "perma_x_mult",
         "perma_p_dollars",
         "perma_roses_balance",
-        "perma_paperback_plus_odds"
+        "perma_paperback_plus_odds",
+        "perma_repetitions"
 },'ace_of_relics')
         PB_UTIL.use_consumable_animation(card, G.hand.highlighted, function()
         for k, v in pairs(G.hand.highlighted) do

@@ -1,17 +1,19 @@
 PB_UTIL.MinorArcana {
   key = 'knight_of_relics',
   config = {
-    paperclip = 'roses_magenta_clip',
-    max_highlighted = 2
+    max_highlighted = 2,
+    mod_conv = 'm_roses_milimetric'
   },
   atlas = 'consumables',
-  pos = { x = 2, y = 0 },
-  paperback_credit = {
+  pos = { x = 4, y = 1 },
+  unlocked = true,
+  discovered = false,
+   paperback_credit = {
     coder = { 'kesooop' },
     artist = { 'kesooop' }
   },
 
   paperback = {
-    requires_paperclips = true
+    requires_enhancements = true
   }
 }

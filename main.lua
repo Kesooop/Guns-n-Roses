@@ -1,4 +1,5 @@
 --#region Atlases
+ROSES = {}
 
 SMODS.Atlas {
     key = 'jokers',
@@ -66,18 +67,15 @@ local jokers_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/jo
 for _, file in ipairs(jokers_src)do
     assert(SMODS.load_file("src/jokers/".. file))()
 end
---local EGO_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/EGO")
---for _, file in ipairs(EGO_src)do
---  assert(SMODS.load_file("src/EGO/".. file))()
---end
+
 local paperclip_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/paperclip")
 for _, file in ipairs(paperclip_src)do
     assert(SMODS.load_file("src/paperclip/".. file))()
 end
---local enhancements_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/enhancements")
---for _, file in ipairs(enhancements_src)do
---    assert(SMODS.load_file("src/enhancements/".. file))()
---end
+local enhancements_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/enhancements")
+for _, file in ipairs(enhancements_src)do
+    assert(SMODS.load_file("src/enhancements/".. file))()
+end
 SMODS.load_file("utilities/definitions.lua")()
 SMODS.load_file("utilities/indicators.lua")()
 SMODS.load_file("utilities/hooks.lua")()
@@ -85,4 +83,5 @@ SMODS.load_file("utilities/misc_functions.lua")()
 SMODS.load_file("utilities/functions.lua")()
 
 PB_UTIL.register_items(PB_UTIL.ENABLED_MINOR_ARCANA, "src/consumables")
+PB_UTIL.register_items(PB_UTIL.ENABLED_SPECTRALS, "src/consumables")
 

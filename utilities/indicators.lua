@@ -6,7 +6,7 @@ local indicators = {
     { key = "perma_x_chips", pos = { x = 3, y = 0 } },
     { key = "perma_roses_balance", pos = { x = 7, y = 0 } },
     { key = "perma_p_dollars", pos = { x = 4, y = 0 } },
-    { key = "perma_roses_x_money", pos = { x = 8, y = 0 } },
+    --{ key = "perma_roses_x_money", pos = { x = 8, y = 0 } },
     { key = "perma_paperback_plus_odds", pos = { x = 5, y = 0 } },
     { key = "perma_x_blind_size", pos = { x = 9, y = 0 } },
     { key = "perma_repetitions", pos = { x = 6, y = 0 } },
@@ -16,12 +16,12 @@ local indicators = {
     { key = "perma_h_x_mult", pos = { x = 1, y = 1 } },
     { key = "perma_h_chips", pos = { x = 2, y = 1 } },
     { key = "perma_h_x_chips", pos = { x = 3, y = 1 } },
-    { key = "perma_roses_h_balance", pos = { x = 7, y = 1 } },
     { key = "perma_h_dollars", pos = { x = 4, y = 1 } },
-    { key = "perma_roses_h_x_money", pos = { x = 7, y = 0 } },
+    --{ key = "perma_roses_h_x_money", pos = { x = 7, y = 0 } },
     { key = "perma_paperback_h_plus_odds", pos = { x = 5, y = 1 } },
     { key = "perma_h_x_blind_size", pos = { x = 9, y = 1 } },
     -- { key = "perma_h_repetitions", pos = { x = 6, y = 1 } },
+        { key = "perma_roses_h_balance", pos = { x = 7, y = 1 } },
 
   }
 }

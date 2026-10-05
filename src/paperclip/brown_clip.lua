@@ -5,40 +5,29 @@ PB_UTIL.Paperclip {
   badge_colour = G.C.ROSES_BROWN,
   special = false,
   config = {
-    handsize = 0,
-    handsize_mod = 1,
-    handsize_max = 16,
-    clips = 0,
-    clips_mod = 1,
-    clips_max = 8 --change to 16
+    odds = 0,
+    odds_mod = 1
   },
 
   loc_vars = function(self, info_queue, card)
     return {
       vars = {
-        card.ability[self.key].handsize,
-        card.ability[self.key].handsize_mod,
-        card.ability[self.key].clips,
-        card.ability[self.key].clips_mod,
-        card.ability[self.key].clips_max,
-        card.ability[self.key].handsize_max
+        card.ability[self.key].odds,
+        card.ability[self.key].odds_mod,
       }
     }
   end,
-calculate = function(self, card, context)
-    if context.cardarea == G.hand and card.ability[self.key].clips > (card.ability[self.key].clips_max - 1) and G.hand.config.card_limit < card.ability[self.key].handsize_max then
-      card.ability[self.key].handsize = card.ability[self.key].handsize_mod
-      card.ability[self.key].clips = card.ability[self.key].clips_max
-      card.ability.card_limit = card.ability[self.key].handsize
-    end
-
-
-    if context.cardarea == G.hand and card.ability[self.key].clips < (card.ability[self.key].clips_max - 1) then
-      card.ability[self.key].handsize = 0
-      card.ability.card_limit = card.ability[self.key].handsize
-    end
-
+  calculate = function(self, card, context)
+  if context.mod_probability  and context.trigger_obj == card then
+    return {
+      numerator = context.numerator + card.ability[self.key].odds
+    }
   end
-
+    if context.playing_card_end_of_round then
+    return {
+      card.ability[self.key].odds == 0
+    }
+  end
+end
 }
 
