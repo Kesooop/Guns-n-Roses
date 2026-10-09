@@ -6,13 +6,14 @@ PB_UTIL.Paperclip {
   special = false,
   config = {
     odds = 0,
-    odds_mod = 1
+    odds_mod = 1,
+    odd = 0
   },
 
   loc_vars = function(self, info_queue, card)
     return {
       vars = {
-        card.ability[self.key].odds,
+        math.floor(card.ability[self.key].odds / 2),
         card.ability[self.key].odds_mod,
       }
     }
@@ -20,7 +21,7 @@ PB_UTIL.Paperclip {
   calculate = function(self, card, context)
   if context.mod_probability  and context.trigger_obj == card then
     return {
-      numerator = context.numerator + card.ability[self.key].odds
+      numerator = context.numerator + math.floor(card.ability[self.key].odds / 2)
     }
   end
     if context.playing_card_end_of_round then

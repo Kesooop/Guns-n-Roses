@@ -54,13 +54,30 @@ SMODS.current_mod.calculate = function(self, context)
       end
      }
   end
+      if context.using_consumeable then
+        if context.consumeable.ability.set == "paperback_minor_arcana" then
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after',
+                delay = 0.1,
+                func = function()
+                    G.GAME.roses_secondlast_minor_arcana = G.GAME.roses_last_minor_arcana or nil
+                    G.GAME.roses_last_minor_arcana = context.consumeable.config.center_key
+                    return true
+                end
+            }))
+        end
+    end
 if context.discard then
     if PB_UTIL.has_paperclip(context.other_card) and not context.other_card.debuff then
       for _, v in ipairs(G.playing_cards) do
         local clip = PB_UTIL.has_paperclip(v)
+        local discarded = PB_UTIL.has_paperclip(context.other_card)
         if clip == "roses_brown_clip" and not v.debuff then
           local clip_table = v.ability.roses_brown_clip
           clip_table.odds = math.max(0, clip_table.odds + clip_table.odds_mod)
+          if discarded == "roses_diamond_clip" then
+            clip_table.odds = math.max(0, clip_table.odds + clip_table.odds_mod) 
+          end
         end
       end
     end
@@ -75,21 +92,10 @@ if context.discard then
       end
     end
   end
-    if context.using_consumeable then
-        if context.consumeable.ability.set == "paperback_minor_arcana" then
-            G.E_MANAGER:add_event(Event({
-                trigger = 'after',
-                delay = 0.1,
-                func = function()
-                    G.GAME.roses_secondlast_minor_arcana = G.GAME.roses_last_minor_arcana or nil
-                    G.GAME.roses_last_minor_arcana = context.consumeable.config.center_key
-                    return true
-                end
-            }))
-        end
-    end
-  end
 end
+
+end
+
 PB_UTIL.ENABLED_MINOR_ARCANA = {
   "ace_of_relics",
   "two_of_relics",

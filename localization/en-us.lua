@@ -231,7 +231,7 @@ return {
             roses_brown_clip = {
                 name = "Brown Clip",
                 text = {
-                   "{C:green}+#2#{} odds for every {C:attention}Clip{}",
+                   "{C:green}+#2#{} odds for every 2 {C:attention}Clips{}",
                    "discarded this round",
                    "{C:inactive}(Currently {{C:green}+#1#{} {C:inactive}odds)"
                 }

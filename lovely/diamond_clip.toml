@@ -1,0 +1,17 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+[[patches]] 
+[patches.pattern]
+target = '=[SMODS paperback "utilities/definitions.lua"]'
+pattern = """ if clip == "paperback_green_clip" and not v.debuff then
+          local clip_table = v.ability.paperback_green_clip
+          clip_table.mult = math.max(0, clip_table.mult - clip_table.mult_minus)"""
+position = "after"
+payload = """            if PB_UTIL.has_paperclip(context.other_card) == "roses_diamond_clip" then
+          clip_table.mult = math.max(0, clip_table.mult - clip_table.mult_minus)
+          end
+"""
+overwrite = true
+match_indent = true

@@ -9,15 +9,15 @@ pattern = """          paperback_pink_clip = function(card)
     return { x_mult = card.ability.paperback_pink_clip.x_mult }
   end,"""
 position = "after"
-payload = """  roses_diamond_clip = function() --we gotta find a way toscore this bih
+payload = """  roses_diamond_clip = function() 
   end,
   roses_magenta_clip = function(card)
   local clips = PB_UTIL.count_paperclips { area = G.hand }
     return {  aij_balance_percent =  card.ability.roses_magenta_clip.balance_base + card.ability.roses_magenta_clip.balance_base + clips * card.ability.roses_magenta_clip.balance_mod * 0.01}
   end,
-  roses_indigo_clip = function() --we gotta find a way toscore this bih
+  roses_indigo_clip = function() 
   end,
-  roses_brown_clip = function() --we gotta find a way toscore this bih
+  roses_brown_clip = function() 
   end,
 """
 overwrite = true
